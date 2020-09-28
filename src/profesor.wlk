@@ -24,7 +24,9 @@ object profesor {
 	
 	method examenSorpresa(){
 		const notaDelExamen = self.promedioNotasDelCurso() + cfd
-		alumnos.forEach({alumno => alumno.agregarNota(notaDelExamen)})
+		if(notaDelExamen <=10){
+			alumnos.forEach({alumno => alumno.agregarNota(notaDelExamen)})
+		}
 	}
 	
 	
